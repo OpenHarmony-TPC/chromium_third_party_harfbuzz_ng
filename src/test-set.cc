@@ -59,6 +59,7 @@ main (int argc, char **argv)
     v = hb_set_t {1, 2};
     assert (v.get_population () == 2);
   }
+
   /* Test initializing set from iterable. */
   {
     hb_set_t s;
