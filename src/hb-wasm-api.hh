@@ -52,18 +52,7 @@
   (void) wasm_externref_obj2ref (module_inst, obj, &obj##ref)
 
 
-#include "hb-wasm-font.hh"
-
-#ifdef HB_DEBUG_WASM
-namespace hb { namespace wasm {
-static void
-debugprint (HB_WASM_EXEC_ENV
-	    char *the_string)
-{
-  DEBUG_MSG (WASM, exec_env, "%s", the_string);
-}
-}}
-#endif
+#include "hb-wasm-api-list.hh"
 
 
 #undef nullref
@@ -71,23 +60,6 @@ debugprint (HB_WASM_EXEC_ENV
 #undef HB_WASM_EXEC_ENV
 #undef HB_REF2OBJ
 #undef HB_OBJ2REF
-
-
-  /* Define an array of NativeSymbol for the APIs to be exported.
-   * Note: the array must be static defined since runtime will keep it after registration
-   * For the function signature specifications, goto the link:
-   * https://github.com/bytecodealliance/wasm-micro-runtime/blob/main/doc/export_native_api.md
-   */
-
-#define NATIVE_SYMBOL(signature, name) {#name, (void *) hb::wasm::name, signature, NULL}
-  static NativeSymbol _hb_wasm_native_symbols[] =
-  {
-    NATIVE_SYMBOL ("(i)i",	font_get_face),
-#ifdef HB_DEBUG_WASM
-    NATIVE_SYMBOL ("($)",	debugprint),
-#endif
-  };
-#undef NATIVE_SYMBOL
 
 
 #endif /* HB_WASM_API_HH */
