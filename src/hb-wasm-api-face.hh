@@ -22,10 +22,10 @@
  * PROVIDE MAINTENANCE, SUPPORT, UPDATES, ENHANCEMENTS, OR MODIFICATIONS.
  */
 
-#ifndef HB_WASM_FACE_HH
-#define HB_WASM_FACE_HH
+#ifndef HB_WASM_API_FACE_HH
+#define HB_WASM_API_FACE_HH
 
-#include <hb-wasm-api.hh>
+#include "hb-wasm-api.hh"
 
 namespace hb {
 namespace wasm {
@@ -53,4 +53,4 @@ face_reference_table (HB_WASM_EXEC_ENV_COMPOUND
 
 }}
 
-#endif /* HB_WASM_FACE_HH */
+#endif /* HB_WASM_API_FACE_HH */
