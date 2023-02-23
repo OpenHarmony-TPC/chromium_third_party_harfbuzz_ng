@@ -27,7 +27,6 @@
 
 #include "hb-wasm-api.hh"
 
-#include "hb-wasm-font.hh"
 
 #ifdef HB_DEBUG_WASM
 namespace hb { namespace wasm {
