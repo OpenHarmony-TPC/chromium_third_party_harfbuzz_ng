@@ -29,6 +29,7 @@
 
 #include "hb-wasm-api-blob.hh"
 #include "hb-wasm-api-buffer.hh"
+#include "hb-wasm-api-common.hh"
 #include "hb-wasm-api-face.hh"
 #include "hb-wasm-api-font.hh"
 #include "hb-wasm-api-shape.hh"
