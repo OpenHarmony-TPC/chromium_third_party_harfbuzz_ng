@@ -1,0 +1,11 @@
+[
+    {
+        "Name": "harfbuzz",
+        "License": "MIT-Modern-Variant",
+        "License File": "COPYING",
+        "Version Number": "11.4.4",
+        "Owner": "huangjiewen2@huawei.com",
+        "Upstream URL": "https://chromium.googlesource.com/external/github.com/harfbuzz/harfbuzz.git@7d936359a27abb2d7cb14ecc102463bb15c11843",
+        "Description": "第三方软件harfbuzz，文本整形引擎"
+    }
+]
